@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="listofpaymentsAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListofPaymentsController">
+   <children>
+      <Label fx:id="alertListofPayments" layoutX="28.0" layoutY="14.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="listofPaymentsTable" layoutX="28.0" layoutY="69.0" prefHeight="356.0" prefWidth="657.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="32.0" text="STT" />
+          <TableColumn fx:id="nameColumn" prefWidth="120.0" text="Tên" />
+            <TableColumn fx:id="moneyColumn" prefWidth="101.0" text="Số tiền" />
+            <TableColumn fx:id="dateColumn" prefWidth="87.0" text="Ngày" />
+            <TableColumn fx:id="typeColumn" prefWidth="72.0" text="Loại" />
+            <TableColumn fx:id="noteColumn" prefWidth="132.0" text="Ghi chú" />
+            <TableColumn fx:id="editColumn" prefWidth="112.0" text="Chỉnh sửa" />
+        </columns>
+      </TableView>
+      <Button fx:id="addPayment_ListofPayments" layoutX="61.0" layoutY="446.0" mnemonicParsing="false" onAction="#OnClickaddPayment_ListofPayments" prefHeight="37.0" prefWidth="110.0" stylesheets="@../cssFiles/application.css" text="Thêm" textFill="#fcfcfc">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="deletePayment_ListofPayments" layoutX="206.0" layoutY="446.0" mnemonicParsing="false" onAction="#OnClickdeletePayment_ListofPayments" prefHeight="37.0" prefWidth="110.0" stylesheets="@../cssFiles/application.css" text="Xóa" textFill="#e4e4e4">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="backtoHomePage_ListofPayments" layoutX="503.0" layoutY="446.0" mnemonicParsing="false" onAction="#OnClickbacktoHomePage_ListofPayments" prefHeight="37.0" prefWidth="137.0" stylesheets="@../cssFiles/application.css" text="Về màn hình chính" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="statistics_ListofPayments" layoutX="357.0" layoutY="446.0" mnemonicParsing="false" onAction="#OnClickstatistics_ListofPayments" prefHeight="37.0" prefWidth="110.0" stylesheets="@../cssFiles/application.css" text="Thống kê" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TextField fx:id="keywordSearch" layoutX="28.0" layoutY="24.0" prefHeight="30.0" prefWidth="657.0" promptText="Tìm kiếm" style="-fx-border-radius: 30px;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
